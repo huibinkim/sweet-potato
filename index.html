@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구마씨</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        @font-face {
+            font-family: 'gogum';
+            src: url(./font/Kyobo\ Handwriting\ 2019.otf);
+        }
+        @font-face {
+            font-family: 'lnb';
+            src: url(./font/TTF/SDSamliphopangcheTTFOutline.ttf);
+        }
+        @font-face {
+            font-family: 'sweet';
+            src: url(./font/TTF/SDSamliphopangcheTTFBasic.ttf)
+        }
+        /* rgb(247, 247, 81) */
+        body{ font-size: 14px; font-weight: 900; background-color: beige; 
+            font-family: 'gogum';
+            }
+
+        header{width: 100%; margin: auto; background: rgb(243, 218, 74) ;  }
+        .header{width: 100%;   height: 120px;  }
+        .header h1{position: absolute; left: 45%; top: 32px; font-family: 'lnb'; font-size: 48px;}
+        .header img{position: absolute; left:-70%; top: -20px;  }
+        /* .header>h1{ width:226px; left: 50%; position: absolute; 
+            transform: translate(-50%, -22%);
+       }
+        
+        .header>h1>a{font-size: 48px;} */
+        .header>p{padding-top: 3.8em;}
+        .gnb{ display: flex; justify-content: end; }
+        .gnb>ul{display: flex; padding-top: 0.5em; padding-right: 2em;}
+        .gnb>ul>li>a{padding-left: 1em; }
+
+        .Menu{background-color: rgb(97, 2, 65);}
+        .lnb{width: 100%; position: relative; }
+        .lnb>ul{display: flex; justify-content: space-evenly; width: 80%; margin: auto;}
+        .lnb>ul>li>a{ display: block; color: white; font-size: 18px; 
+             padding: 1em; font-family: 'sweet'; line-height: 1em;
+                text-align: center;}
+        .lnb>ul>li:first-child>a{padding-left: 30px;}
+        .lnb>ul>li:last-child>a{padding-right: 30px;}
+
+        .subMenu{position: absolute; padding: 1.3em; background-color:white ; display: none;  }
+        .subMenu>li{padding-bottom: 0.5em;}
+        .subMenu>li>a{display: block; line-height: 2em;}
+        .lnb>ul>li:nth-of-type(1)>.subMenu>li{margin-left:1em; 
+         }
+
+        .lnb>ul>li:hover .subMenu{display: block; }
+
+         /* header end */
+       .content{width:100%; margin: auto;}
+       .mainBanner{width: 80%;   margin: auto; overflow: hidden;
+        }
+        .mainBanner img{width: 100%;}
+        
+    
+        
+        /* contetn01 design */
+        
+        .content01{width: 80%; margin: auto;   }
+        .newProduct{width: 100%; margin: auto; background-color: rgb(250, 249, 246);
+            display: flex; flex-wrap: wrap; position: relative;}
+        .newProduct>h2{width: 100%; font-size: 28px; padding-left: 2.5em; padding-top: 1em;
+                    background-image: url(./finish_design/gogumaImg_1.png);
+                    background-repeat: no-repeat; background-size:contain;
+                    background-position-x: 140px ;
+                    background-position-y: 2px;
+        }
+        .newProduct>div{width: 33.3333333%; }
+        .newProduct>div>img{width: 100%; padding:2em 5em;   }
+        .newProduct>div>p{padding-left: 5em;  font-size: 16px;  line-height: 2em;}
+        
+        .afterText{text-align: center; font-size: 16px;  width: 100%; line-height: 4em; background-color: rgb(250, 249, 246);}
+        .afterText::after{content: ''; display: block; width: 100%;  
+                        border: 1px solid gray; }
+
+        .clickImg{width: 90%; display: none; }
+        .clickImg div{width: 33.333333333%; float: left;}
+        .clickImg>div>img{width: 100%; padding: 2em 5em; }
+        .clickImg>div>p{padding-left: 5em;}
+        .clickImg>p{padding: 2em; width: 100%; text-align: center; font-size: 16px;}
+
+        .BestProduct{width: 100%; background-color: rgb(250, 249, 246); display: flex; flex-wrap: wrap;
+            position: relative; margin: auto; }
+        .BestProduct>h2{width: 100%; font-size: 28px;  padding-left: 2.5em; padding-top: 1em;
+                        background-image: url(./finish_design/gogumaImg_1.png);  
+                        background-repeat: no-repeat; background-size: contain;
+                        background-position-x: 140px;  
+                        background-position-y: 2px;    
+        }
+        .BestProduct>div{ width: 33.3333333%;}
+        .BestProduct>div>img{width: 100%;  padding: 2em 5em;}
+        .BestProduct>div>p{padding-left: 5em;  font-size: 16px;  line-height: 2em;}
+        
+        .afterText2{text-align: center; font-size: 16px;  width: 100%; line-height: 4em; background-color: rgb(250, 249, 246);}
+        .afterText2::after{content: ''; display: block; width: 100%;  
+                        border: 1px solid gray; }
+        
+          
+        
+
+        /* content01 end */
+        
+
+        .content02{width: 90%;  display: flex; 
+            margin: auto; position: relative; padding-top: 4em; padding-bottom: 4em; }
+        .content02>div{width: 33.333333%;
+                border-top: 1px solid rgb(182, 179, 179);font-size: 14px;  }
+        .Notice{ border-right: 1px solid  rgb(182, 179, 179);}
+        .Notice>ul>li{margin: 1em; }
+        .Notice>ul>li:nth-child(1){font-size: 18px; 
+                            text-align: center; padding: 0.3em;}
+        .Notice>ul>li>a{display: block; line-height: 1.7em; text-indent: 1em;}
+        .Notice>ul>li:nth-of-type(1)~::after{content: '';display: block; width: 100%; 
+                                               border: 1px solid gray;}
+
+        .Time{width: 100%; border-right: 1px solid  rgb(182, 179, 179);}
+        .Time>ul>li{text-align: center; line-height: 2.2em; word-spacing: 0.5em;
+                    margin: 2em;}
+
+        .Time>ul>li:nth-of-type(2){font-size:18px;}
+
+
+        /* footer design */
+        footer{width:100%;   }
+        .Introduce{display: flex; justify-content: space-between; 
+                 background-color: lightgray; position: relative;
+                 padding: 0 5em;
+                }
+        .Introduce>ul>li{float: left;  padding: 1.5em;}
+        .Address{padding-left: 4.7em;}
+        .Address>p{margin: 1.6em; line-height: 2.3em;}
+        .Address>p:nth-of-type(2){color: gray; font-style: italic;}
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1><a href="index.html"><img src="./finish_design/guma-charactor.png">구마씨</a></h1>
+           
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">로그인</a></li>                     
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    
+                </ul>
+            </nav>   
+        </div>
+        <div class="Menu">
+            <nav class="lnb">
+                <ul>
+                    <li><a href="sub1_.html">About 구마</a>
+                        <ul class="subMenu">
+                            <li><a href="sub1_.html">구마의 효능</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li><a href="sub2_1.html">구마 상품</a>
+                        <ul class="subMenu">
+                            <li><a href="sub2_1.html">농장별 구마</a></li>
+                            <li><a href="sub2_1.html">구마 외 상품</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li><a href="#">구마 간식</a>
+                        <ul class="subMenu">
+                            <li><a href="#">달콤</a></li>
+                            <li><a href="#">짭짤</a></li>
+                            <li><a href="#">튼튼</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li><a href="sub4.html">구마 요리</a>
+                        <ul class="subMenu">
+                            <li><a href="sub4.html">레시피</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sub5.html">구마 알리미</a>
+                        <ul class="subMenu">
+                            <li><a href="sub5.html">공지사항</a></li>
+                            <li><a href="sub5.html">이벤트</a></li>
+                            <li><a href="sub5.html">지도</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <section class="content">
+        <div class="mainBanner">
+               <img src="./finish_design/mainbanner.png" alt="" id="mainBimg">
+                <!-- <img src="./images/main_img2.jpg" alt="" id="mainBimg">
+                <img src="./images/main_img3.jpg" alt="" id="mainBimg">
+                <img src="./images/main_img4.jpg" alt="" id="mainBimg"> -->
+       </div>
+        <div class="content01">
+            <div class="newProduct">
+                <h2>NEW</h2>
+                <div class="new01">
+                    <img src="./images/chew-go.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new02">
+                    <img src="./images/fog_goguma.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 24,100원
+                    </p>
+                </div>
+                <div class="new03">
+                    <img src="./images/sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 20kg 특상
+                        <br><strong>22%</strong> 44,500원
+                    </p>
+                </div>
+                <div class="new04">
+                    <img src="./images/subimg02.jpg" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                 <div class="new05">
+                    <img src="./images/subimg03.jpg" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new06">
+                    <img src="./images/subimg04.jpg" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+        
+            </div>
+            <div class="afterText">
+                <p>더보기</p>
+            </div>
+        
+            <div class="clickImg">
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+        
+            </div>
+            <div class="BestProduct">
+                <h2>BEST</h2>
+                <div class="new01">
+                    <img src="./images/subimg05.jpg" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new02">
+                    <img src="./images/subimg06.jpg" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new03">
+                    <img src="./images/subimg07.jpg" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new04">
+                    <img src="./images/subimg08.jpg" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new05">
+                    <img src="./images/sweet02.jpeg" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new06">
+                    <img src="./images/sweet03.jpeg" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+            </div>
+            <div class="afterText2">
+                <p>더보기</p>
+            </div>
+            <div class="clickImg">
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+                <div class="new07">
+                    <img src="./sub1_img.png" alt="">
+                    <p>진품인증 받은 해남고구마
+                        <br>2021년 수확한 호박고구마 3kg 특상
+                        <br><strong>22%</strong> 14,100원
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="addImg">
+
+    </div>
+    <section class="content02">
+        <div class="Notice">
+            <ul>
+                <li>Notice</li>
+                <li><a href="#">2021년 해남고구마 브랜드  2020/11/30</a></li>
+                <li><a href="#">2018년 해남고구마 브랜드 2019/10/19</a></li>
+                <li><a href="#">2017년 해남고구마 브랜드 2019/03/20</a></li>
+                <li><a href="#">2017년 해남고구마 브랜드 2018/09/21</a></li>
+            </ul>
+        </div>
+        <div class="Time">
+            <ul>
+                <li>고객센터 이용안내  <br>토요일, 일요일, 공휴일은 휴무입니다.</br>
+                </li>
+                <li>054 534 9922</li>
+                <li><b>Mon-Fri</b> 10:00-17:00 
+                    <b>Lunch</b> 12:00-13:00</li>
+            </ul>
+        </div>
+        <div class="Icon">
+            <img src="" alt="">
+            <p></p>
+            <img src="" alt="">
+            <p></p>
+            <img src="" alt="">
+            <p></p>
+            <img src="" alt="">
+            <p></p>
+            <img src="" alt="">
+            <p></p>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="Introduce">
+            <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">instagram</a></li>
+            </ul>
+        </div>
+       <div class="Address ">
+           <p>사업자등록번호 : 314-82-12174 ㅣ
+             통신판매업신고번호 : 234234 ㅣ
+            계좌번호 : 농협 351-328049<br>
+           대표이사 : 윤상기 ㅣ
+           주소 :  전라남도 해남군 옥춘면 해남고구마생산자협회 ㅣ
+          상호명 : (사)해남고구마생산자협회</p><br>
+           <p>Copyright Haenam Sweet Potato Grower Association All rights reserved.</p>
+
+       </div>
+
+    </footer>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    
+    <script>
+
+      
+
+    </script>
+</body>
+</html>

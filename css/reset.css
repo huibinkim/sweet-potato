@@ -1,0 +1,9 @@
+@charset 'utf-8';
+
+
+*{margin: 0px;padding: 0px; box-sizing: border-box;} 
+a{text-decoration: none; color: #333; }
+body{font-size: 14px; font-family: '굴림';} 
+li{list-style: none;}
+img{border: none; vertical-align: top;}
+.clearFix::after{content:''; display: block; clear: both;}

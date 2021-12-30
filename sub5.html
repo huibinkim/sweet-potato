@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>해남고구마</title>
+   <link rel="stylesheet" href="./css/reset.css">
+   <meta charset="utf-8">
+  
+ 
+   <style>
+     
+       @font-face {
+           font-family: 'lnb';
+           src: url(./font/TTF/SDSamliphopangcheTTFOutline.ttf);
+       }
+       @font-face {
+           font-family: 'gnb';
+           src: url(./font/Kyobo\ Handwriting\ 2019.otf);
+       }
+       @font-face {
+            font-family: 'sweet';
+            src: url(./font/TTF/SDSamliphopangcheTTFBasic.ttf)
+        }
+       /* rgb(250, 249, 246) */
+       body{font-size: 14px; font: weight 30px; background-color: beige; 
+           font-family: 'gnb';  font-weight: 900; }
+
+        header{width: 100%; margin: auto;background-color: rgb(247, 247, 81);  }
+        .header{width: 100%;   height: 120px; }
+        .header>h1{ width:226px; left: 50%; position: absolute; 
+            transform: translate(-50%, -22%);
+       }
+        .header>h1>a{font-size: 0;}
+        
+        .gnb{ display: flex; justify-content: end;}
+        .gnb>ul{display: flex; padding-top: 0.5em;padding-right: 2em;}
+        .gnb>ul>li>a{padding-left: 1em;  }
+
+        .Menu{background-color: rgb(85, 53, 22);
+               }
+        .lnb{width: 100%; position: relative;}
+        .lnb>ul{display: flex; justify-content: space-evenly; width: 80%; margin: auto; }
+        .lnb>ul>li>a{ display: block; color: white; font-size: 18px; 
+             padding: 1em; font-family: 'sweet';
+                text-align: center;}
+        .lnb>ul>li:first-child>a{padding-left: 30px;}
+        .lnb>ul>li:last-child>a{padding-right: 30px;}
+
+        .subMenu{position: absolute; padding: 1.3em; margin-left: 1em; transition: 1s;
+            background-color:white ; display: none;  
+        }
+        .subMenu>li{padding-bottom: 0.5em; }
+        .subMenu>li>a{display: block; line-height: 2em;}
+        /* .lnb>ul>li:nth-of-type(1)>.subMenu>li{margin-left:1em; 
+         } */
+
+        .lnb>ul>li:hover .subMenu{display: block; z-index: 99999;}
+         /* header end */
+
+         #sub5{width: 100%;}
+         /* .leftNotice{width: 200px; height: 100vh; border-right: 1px solid rgb(146, 147, 148); }
+         .leftNotice ul{width: 100%; padding: 5em; }
+         .leftNotice>li{width: 100%; }
+         .leftNotice>ul>li>a{ line-height: 7em;  font-size: 16px; } */
+         .content{width: 100%; display: flex;  }
+         .tab {overflow: hidden;
+            width: 150px; height: 100vh;
+               }
+
+         /* Style the buttons that are used to open the tab content */
+         .tab button {  
+            font-family: 'gnb'; font-size: 18px;
+            width: 100%; height: 30%;
+         background-color: rgb(223, 221, 221);
+         float: left;
+         border: none;
+         outline:cornflowerblue;
+         cursor: pointer;
+         padding: 14px 16px;
+         transition: 0.3s;
+         }
+
+         /* Change background color of buttons on hover */
+         .tab button:hover {
+         background-color: rgb(133, 4, 25);
+         color: #fff;
+         }
+
+         /* Create an active/current tablink class */
+         .tab button.active {
+         background-color:rgb(133, 4, 25);
+         color: #fff;
+         }
+
+         /* Style the tab content */
+         .tabcontent {
+            width: calc(100% - 200px);
+         display: none;
+         padding: 2px 12px;
+         
+         border-top: none;
+         }
+
+         .tabcontent {
+         animation: fadeEffect 1s; /* Fading effect takes 1 second */
+         }
+
+         /* Go from zero to full opacity */
+         @keyframes fadeEffect {
+         from {opacity: 0;}
+         to {opacity: 1;}
+         }
+        
+         .notice{width: 100%; height: 100vh; margin: auto; padding-top: 2em;}
+         table{width: 70%; height: 700px; margin: auto; border: 1px solid black; 
+               background-color: #fff;
+         }
+         th{ font-size: 16px; background-color:rgb(133, 4, 25) ; color: #fff;}
+         tr, th, td{border: 1px solid black; padding-left: 3em;}
+         .eventGuma{width: 100%; margin: auto; display: flex; flex-wrap: wrap;}
+         .eventGuma div{width: 50%; height: 300px; 
+                     margin: auto;}
+         .eventGuma>div>img{
+            width: 100%; 
+         }
+         #Tokyo{width:100% ; }
+         #map{margin: auto; width: 100%; }
+         #Tokyo>p{text-align: center; font-size: 20px; padding-top: 4em; word-spacing: 0.5em;}
+
+   </style> 
+    
+</head>
+<body>
+   <header>
+      <div class="header">
+          <h1><a href="index.html"><img src="./finish_design/logo_2.png" alt="고구마">고씨의 구마이야기</a>
+         </h1>
+         
+          <nav class="gnb">
+              <ul>
+                  <li><a href="#">로그인</a></li>                     
+                  <li><a href="#">회원가입</a></li>
+                  <li><a href="#">마이페이지</a></li>
+                  <li><a href="#">장바구니</a></li>
+                  <li><a href="#">고객센터</a></li>
+                  
+              </ul>
+          </nav>   
+      </div>
+      <div class="Menu">
+         <nav class="lnb">
+             <ul>
+                 <li><a href="sub1_.html">About 구마</a>
+                     <ul class="subMenu">
+                         <li><a href="sub1_.html">구마의 효능</a></li>
+                        
+                     </ul>
+                 </li>
+                 <li><a href="sub2_1.html">구마 상품</a>
+                     <ul class="subMenu">
+                         <li><a href="sub2_1.html">농장별 구마</a></li>
+                         <li><a href="sub2_1.html">구마 외 상품</a></li>
+                        
+                     </ul>
+                 </li>
+                 <li><a href="#">구마 간식</a>
+                     <ul class="subMenu">
+                         <li><a href="#">달콤</a></li>
+                         <li><a href="#">짭짤</a></li>
+                         <li><a href="#">튼튼</a></li>
+                        
+                     </ul>
+                 </li>
+                 <li><a href="sub4.html">구마 요리</a>
+                     <ul class="subMenu">
+                         <li><a href="sub4.html">레시피</a></li>
+                     </ul>
+                 </li>
+                 <li><a href="sub5.html">구마 알리미</a>
+                     <ul class="subMenu">
+                         <li><a href="sub5.html">공지사항</a></li>
+                         <li><a href="sub5.html">이벤트</a></li>
+                         <li><a href="sub5.html">지도</a></li>
+                     </ul>
+                 </li>
+             </ul>
+         </nav>
+     </div>
+      
+  </header>
+
+      <section id="sub5">
+      
+         <!-- <div class="leftNotice">
+         <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">지도</a></li>
+         </ul>
+         </div> -->
+
+         <div class="content">
+            <div class="tab">
+               <button class="tablinks" onclick="openCity(event, 'London')">공지사항</button>
+               <button class="tablinks" onclick="openCity(event, 'Paris')">이벤트</button>
+               <button class="tablinks" onclick="openCity(event, 'Tokyo')">지도</button>
+             </div>
+            
+             <!-- Tab content -->
+             <div id="London" class="tabcontent">
+               <div class="notice">
+                  <table class="active">
+                     <th>알리구마</th>
+                    
+                     <tr>
+                        <td><a href="#">해남고구마 출시!! 꿀 같은 고구마 확인하세요</a> </td>
+                     </tr>
+                     <tr>
+                        <td><a href="#">새로운 고구마 레시피가 업데이트 되었습니다. 맛있게 드세요</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#">새로운 고구마 레시피가 업데이트 되었습니다. 맛있게 드세요</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#">새로운 고구마 레시피가 업데이트 되었습니다. 맛있게 드세요</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#">새로운 고구마 레시피가 업데이트 되었습니다. 맛있게 드세요</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#">새로운 고구마 레시피가 업데이트 되었습니다. 맛있게 드세요</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#">새로운 고구마 레시피가 업데이트 되었습니다. 맛있게 드세요</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#">새로운 고구마 레시피가 업데이트 되었습니다. 맛있게 드세요</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#">새로운 고구마 레시피가 업데이트 되었습니다. 맛있게 드세요</a></td>
+                     </tr>
+                     <tr>
+                        <td><a href="#"> 고구마 간식거리 New</a></td>
+                     </tr>
+                  </table>
+               </div>
+             </div>
+            
+             <div id="Paris" class="tabcontent">
+               <div class="eventGuma">
+                  <div><img src="./finish_design/banner.png" alt=""></div>
+                  <div><img src="./finish_design/banner02.png" alt=""></div>
+                  <div>banner</div>
+               </div>
+             </div>
+            
+             <div id="Tokyo" class="tabcontent">
+               
+               
+               <div id="map" style="width:70%; height: 500px;"></div>
+               <p>주소 :  전라남도 해남군 옥춘면 해남고구마생산자협회 </p>
+             
+              
+              
+         </div>
+      </section>
+      
+      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=37d38ea1f6967ed11cee7083b760a2ff"></script>
+      <script>
+         var container = document.getElementById('map');
+         var options = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            level: 3
+         };
+   
+         var map = new kakao.maps.Map(container, options);
+      </script>
+      <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo0EW8Toxt64bJRBJRiRPCxMYri39ldiI&callback=initMap&region=kr"></script>
+      <script src="./script.js"></script> -->
+  
+      <!-- <script>
+         function initMap() {
+           var seoul = { lat: 37.5642135 ,lng: 127.0016985 };
+           var map = new google.maps.Map(
+             document.getElementById('map'), {
+               zoom: 12,
+               center: seoul
+             });
+           
+         }
+         var map;
+
+         function initMap() {
+         var seoul = { lat: 37.5642135 ,lng: 127.0016985 };
+         map = new google.maps.Map( document.getElementById('map'), {
+               zoom: 12,
+               center: seoul
+            });
+
+         new google.maps.Marker({
+            position: seoul,
+            map: map,
+            label: "고구마 판매처"
+         });
+         }
+       </script> -->
+   <script src="../js/jquery-3.6.0.min.js"></script>
+   <script src="../js/fullpage.js"></script>
+   <script>
+         function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+      }
+   </script>
+
+
+</body>
+</html>
+

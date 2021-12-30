@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>해남고구마</title>
+   <link rel="stylesheet" href="./css/reset.css">
+   <style>
+       @font-face {
+           font-family: 'lnb';
+           src: url(./font/TTF/SDSamliphopangcheTTFOutline.ttf);
+       }
+       @font-face {
+           font-family: 'gnb';
+           src: url(./font/Kyobo\ Handwriting\ 2019.otf);
+       }
+       @font-face {
+            font-family: 'sweet';
+            src: url(./font/TTF/SDSamliphopangcheTTFBasic.ttf)
+        }
+       /* rgb(250, 249, 246) */
+       body{font-size: 14px; font: weight 30px; background-color: beige; 
+           font-family: 'gnb';  font-weight: 900; }
+
+        header{width: 100%; margin: auto;background-color: rgb(247, 247, 81);  }
+        .header{width: 100%;   height: 120px; }
+        .header>h1{ width:226px; left: 50%; position: absolute; 
+            transform: translate(-50%, -22%);
+       }
+        .header>h1>a{font-size: 0;}
+        
+        .gnb{ display: flex; justify-content: end;}
+        .gnb>ul{display: flex; padding-top: 0.5em;padding-right: 2em;}
+        .gnb>ul>li>a{padding-left: 1em;  }
+
+        .Menu{background-color: rgb(85, 53, 22);
+               }
+        .lnb{width: 100%; position: relative;}
+        .lnb>ul{display: flex; justify-content: space-evenly; width: 80%; margin: auto; }
+        .lnb>ul>li>a{ display: block; color: white; font-size: 18px; 
+             padding: 1em; font-family: 'sweet';
+                text-align: center;}
+        .lnb>ul>li:first-child>a{padding-left: 30px;}
+        .lnb>ul>li:last-child>a{padding-right: 30px;}
+
+        .subMenu{position: absolute; padding: 1.3em; margin-left: 1em; transition: 1s;
+            background-color:white ; display: none;  
+        }
+        .subMenu>li{padding-bottom: 0.5em; }
+        .subMenu>li>a{display: block; line-height: 2em;}
+        /* .lnb>ul>li:nth-of-type(1)>.subMenu>li{margin-left:1em; 
+         } */
+
+        .lnb>ul>li:hover .subMenu{display: block; z-index: 99999;}
+         /* header end */
+
+         #sub2{width: 100%; margin: auto;   }
+         .content{width: 100%; }
+         .recipe01{width: 70%; margin: auto; padding-bottom: 1em; 
+                    display: flex; flex-wrap: wrap; justify-content: space-between;}
+         .recipe01 h2{width: 100%; font-size: 24px; text-align: center; margin-top: 2em; padding: 0.5em;}
+         .recipe01 h2::after{content: ''; display: block; width: 100%; 
+                        border: 8px solid wheat; border-style:outset; border-radius: 10px;}
+         .reciImg{width: 50%; background-color: #fff; }
+         .reciImg img{width: 100%;}
+         .reciText{width: 50%; padding: 1.5em 1em 1.5em 1.5em; line-height: 2em;
+            font-size: 16px; background-color: rgb(241, 238, 42);
+                         }
+        .reciText>span{display: block; border: 1px solid black; border-style: dashed;
+                        padding: 1em;}
+        .recipeOther{width: 70%; margin: auto; padding: 2em;
+                display: flex; justify-content: space-evenly; 
+            }
+        .recipeOther div{ width: 23%; height: 150px; margin: auto; position: relative;
+        }
+        .recipeOther div>a>img{width: 100%; position: absolute; background-color: rgb(4, 124, 74);
+                    padding: 1em; border-radius: 100%; }
+
+   </style> 
+    
+</head>
+<body>
+   <header>
+      <div class="header">
+          <h1><a href="index.html"><img src="./finish_design/logo_2.png" alt="고구마">고씨의 구마이야기</a>
+         </h1>
+         
+          <nav class="gnb">
+              <ul>
+                  <li><a href="#">로그인</a></li>                     
+                  <li><a href="#">회원가입</a></li>
+                  <li><a href="#">마이페이지</a></li>
+                  <li><a href="#">장바구니</a></li>
+                  <li><a href="#">고객센터</a></li>
+                  
+              </ul>
+          </nav>   
+      </div>
+      <div class="Menu">
+        <nav class="lnb">
+            <ul>
+                <li><a href="sub1_.html">About 구마</a>
+                    <ul class="subMenu">
+                        <li><a href="sub1_.html">구마의 효능</a></li>
+                       
+                    </ul>
+                </li>
+                <li><a href="sub2_1.html">구마 상품</a>
+                    <ul class="subMenu">
+                        <li><a href="sub2_1.html">농장별 구마</a></li>
+                        <li><a href="sub2_1.html">구마 외 상품</a></li>
+                       
+                    </ul>
+                </li>
+                <li><a href="#">구마 간식</a>
+                    <ul class="subMenu">
+                        <li><a href="#">달콤</a></li>
+                        <li><a href="#">짭짤</a></li>
+                        <li><a href="#">튼튼</a></li>
+                       
+                    </ul>
+                </li>
+                <li><a href="sub4.html">구마 요리</a>
+                    <ul class="subMenu">
+                        <li><a href="sub4.html">레시피</a></li>
+                    </ul>
+                </li>
+                <li><a href="sub5.html">구마 알리미</a>
+                    <ul class="subMenu">
+                        <li><a href="sub5.html">공지사항</a></li>
+                        <li><a href="sub5.html">이벤트</a></li>
+                        <li><a href="sub5.html">지도</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+      
+  </header>
+
+  <section id="sub2">
+  
+      <div class="content">
+        
+         <div class="recipe01">
+            <h2>레시피</h2>
+            <div class="reciImg">
+               <img src="./recipe/recipe01.png" alt="">
+            </div>
+
+            <div class="reciText">
+                <span>
+                <h3>&lt; 고구마 그라탕 &gt;</h3><br>
+
+                <h4>* 고구마 그라탱 재료</h4>
+
+                고구마 2kg 모차렐라 치즈 1컵
+                옥수수콘 50g 양파 1/4개
+                식빵 1장 햄 50g 우유 50ml
+                파슬리가루 견과류 20g
+                건포도 10개<br><br>
+
+                1. 제일먼저 고구마를 삶아줄게요
+                물이 팔팔끓으면 중불로 줄이고 대략 20분정도!
+                고구마사이즈에따라 다르니 젓가락으로 푹푹 찔러보세요<br><br>
+
+                2.양파랑 베이컨은 잘게잘게 썰어주고	
+                옥수수도 준비!
+                콘옥수수통조림 사용하셔도 괜찮아요
+                저희집은 냉동실에 얼려둔게 있어서 그걸 사용<br><br>
+
+                3.팬에 먼저 베이컨을 달달달 볶아주다가	
+                양파넣고 후추 톡톡해서 볶아냅니다<br><br>
+
+                4.잘삶긴 고구마는 잘으깨주고~	
+                재료들을 다합쳐서 섞어주세요<br><br>
+
+                5.오븐용 그릇에 담아주기	
+                고구마담고 피자치즈담고 고구마담고 피자치즈담고 이렇게 층층이 올려주세요<br><br>
+
+                6.180도 예열한 오븐에서 10분!
+                오븐이 없으시면 전자렌지에 피자치즈가 녹을만큼만 돌려주셔도 좋아요</span>
+            </div>
+            <!-- https://www.youtube.com/watch?v=HvuJ1wy2KII -->
+         
+         
+
+         </div>
+         <div class="recipeOther">
+            <div><a href=""><img src="./recipe/img02_1.png" alt=""></a></div>
+            <div><a href=""><img src="./recipe/img04_1.png" alt=""></a></div>
+            <div><a href=""><img src="./recipe/img05_1.png" alt=""></a></div>
+            <div><a href=""><img src="./recipe/img02_1.png" alt=""></a></div>
+         </div>
+      </div>
+
+
+  </section>
+
+
+
+
+
+   <script src="../js/jquery-3.6.0.min.js"></script>
+   <script src="../js/fullpage.js"></script>
+   <script>
+
+
+
+
+
+      
+   </script>
+
+
+</body>
+</html>
+

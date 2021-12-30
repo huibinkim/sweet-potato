@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>해남고구마</title>
+   <link rel="stylesheet" href="./css/reset.css">
+   <style>
+       @font-face {
+           font-family: 'lnb';
+           src: url(./font/TTF/SDSamliphopangcheTTFOutline.ttf);
+       }
+       @font-face {
+           font-family: 'gnb';
+           src: url(./font/Kyobo\ Handwriting\ 2019.otf);
+       }
+       @font-face {
+            font-family: 'sweet';
+            src: url(./font/TTF/SDSamliphopangcheTTFBasic.ttf)
+        }
+       /* rgb(250, 249, 246) */
+       body{font-size: 14px; font: weight 30px; background-color: beige; 
+           font-family: 'gnb';  font-weight: 900; }
+           header{width: 100%; margin: auto;background-color: rgb(247, 247, 81);  }
+        .header{width: 100%;   height: 120px; }
+        .header>h1{ width:226px; left: 50%; position: absolute; 
+            transform: translate(-50%, -22%);
+       }
+        .header>h1>a{font-size: 0;}
+        
+        .gnb{width: 100%; display: flex; justify-content: end;}
+        .gnb>ul{display: flex; padding-top: 0.5em;padding-right: 2em;}
+        .gnb>ul>li>a{padding-left: 1em;  }
+
+        .Menu{background-color: rgb(85, 53, 22);
+               }
+        .lnb{width: 100%; position: relative;}
+        .lnb>ul{display: flex; justify-content: space-evenly; width: 80%; margin: auto; }
+        .lnb>ul>li>a{ display: block; color: white; font-size: 18px; 
+             padding: 1em; font-family: 'sweet';
+                text-align: center;}
+        .lnb>ul>li:first-child>a{padding-left: 30px;}
+        .lnb>ul>li:last-child>a{padding-right: 30px;}
+
+        .subMenu{position: absolute; padding: 1.3em; background-color:white ; display: none;  }
+        .subMenu>li{padding-bottom: 0.5em;}
+        .subMenu>li>a{display: block; line-height: 2em;}
+        .lnb>ul>li:nth-of-type(1)>.subMenu>li{margin-left:1em; 
+         }
+
+        .lnb>ul>li:hover .subMenu{display: block; z-index: 99999;}
+         /* header end */
+
+         #sub2{width: 100%; margin: auto;   }
+         .content{width: 100%; padding-top: 2em; 
+                  background-image: url(./finish_design/arrow-left.png),url(./finish_design/arrow-right.png),
+                  url(./finish_design/arrow-left.png),url(./finish_design/arrow-right.png); 
+                  background-position-y:25%, 25%, 75%, 75%; background-position-x: 10%, 90%;
+                  background-repeat:no-repeat;}
+         .bestP{width: 70%; margin: auto; display: flex; flex-wrap: wrap;
+                 
+               }
+         .bestP h2{width: 100%; font-size: 28px; text-align: center; padding: 0.5em;
+                  background-color: aliceblue;   color: rgb(85, 53, 22) ;  margin:2em;    
+         }
+         .bestP div{width: 33.333333333%; padding: 2em; display: flex; justify-content: center; }
+         .bestP div>img{width: 200px;  }
+         .bestP div>p{ padding-left: 2em; line-height: 2em;}
+         .bestP div strong{display:block; font-size: 20px; font-weight: calc(2000px);}
+         .bestP div span{display: block; color: red;}
+
+         .otherP{width: 70%; margin: auto; display: flex; flex-wrap: wrap;}
+         .otherP h2{width: 100%; font-size: 28px; text-align: center; padding: 0.5em;
+                  background-color:rgb(85, 53, 22) ; color: white; margin: 2em;
+         }
+         .otherP div{width: 33.333333333%; padding: 2em; display: flex; justify-content: center; }
+         .otherP div>img{width: 200px;  }
+         .otherP div>p{ padding-left: 2em; line-height: 2em;}
+         .otherP div strong{display:block; font-size: 20px; font-weight: calc(2000px);}
+         .otherP div span{display: block; color: red;}
+
+         .otherP::after{content: ''; display: block; margin: 2em;}
+
+   </style> 
+    
+</head>
+<body>
+   <header>
+      <div class="header">
+          <h1><a href="index.html"><img src="./finish_design/logo_2.png">해남고구마</a>
+          
+         </h1>
+         
+          <nav class="gnb">
+              <ul>
+                  <li><a href="#">로그인</a></li>                     
+                  <li><a href="#">회원가입</a></li>
+                  <li><a href="#">마이페이지</a></li>
+                  <li><a href="#">장바구니</a></li>
+                  <li><a href="#">고객센터</a></li>
+                  
+              </ul>
+          </nav>   
+      </div>
+      <div class="Menu">
+         <nav class="lnb">
+             <ul>
+                 <li><a href="sub1_.html">About 구마</a>
+                     <ul class="subMenu">
+                         <li><a href="sub1_.html">구마의 효능</a></li>
+                        
+                     </ul>
+                 </li>
+                 <li><a href="sub2_1.html">구마 상품</a>
+                     <ul class="subMenu">
+                         <li><a href="sub2_1.html">농장별 구마</a></li>
+                         <li><a href="sub2_1.html">구마 외 상품</a></li>
+                        
+                     </ul>
+                 </li>
+                 <li><a href="#">구마 간식</a>
+                     <ul class="subMenu">
+                         <li><a href="#">달콤</a></li>
+                         <li><a href="#">짭짤</a></li>
+                         <li><a href="#">튼튼</a></li>
+                        
+                     </ul>
+                 </li>
+                 <li><a href="sub4.html">구마 요리</a>
+                     <ul class="subMenu">
+                         <li><a href="sub4.html">레시피</a></li>
+                     </ul>
+                 </li>
+                 <li><a href="sub5.html">구마 알리미</a>
+                     <ul class="subMenu">
+                         <li><a href="sub5.html">공지사항</a></li>
+                         <li><a href="sub5.html">이벤트</a></li>
+                         <li><a href="sub5.html">지도</a></li>
+                     </ul>
+                 </li>
+             </ul>
+         </nav>
+     </div>
+      
+  </header>
+
+  <section id="sub2">
+  
+      <div class="content">
+         
+         <div class="bestP">
+            <h2>농장별 구마</h2>
+            <div>
+               <img src="./images/chew-go.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/chew-go.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/chew-go.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/chew-go.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/chew-go.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/chew-go.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/chew-go.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/chew-go.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/chew-go.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+
+           
+         </div>
+
+        
+         <div class="otherP">
+            <h2>구마 외 상품</h2>
+            <div>
+               <img src="./images/fog_goguma.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/fog_goguma.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/fog_goguma.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/fog_goguma.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/fog_goguma.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/fog_goguma.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/fog_goguma.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/fog_goguma.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+            <div>
+               <img src="./images/fog_goguma.png" alt="">
+               <p><strong><span>22% </span> 27,800원</strong> <br>
+                     희빈이네 농장<br>
+                     꿀맛 호박고구마
+               </p>     
+            </div>
+
+           
+           
+         </div>
+
+
+      </div>
+
+
+  </section>
+
+
+
+
+
+   <script src="../js/jquery-3.6.0.min.js"></script>
+   <script src="../js/fullpage.js"></script>
+   <script>
+
+
+
+
+
+      
+   </script>
+
+
+</body>
+</html>
+

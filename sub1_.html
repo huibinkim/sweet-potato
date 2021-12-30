@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>해남고구마</title>
+   <link rel="stylesheet" href="./css/reset.css">
+   <style>
+       @font-face {
+           font-family: 'lnb';
+           src: url(./font/TTF/SDSamliphopangcheTTFOutline.ttf);
+       }
+       @font-face {
+           font-family: 'gnb';
+           src: url(./font/Kyobo\ Handwriting\ 2019.otf);
+       }
+       @font-face {
+            font-family: 'sweet';
+            src: url(./font/TTF/SDSamliphopangcheTTFBasic.ttf)
+        }
+       /* rgb(250, 249, 246) */
+       body{font-size: 14px; font: weight 30px; background-color: beige; 
+           font-family: 'gnb';  font-weight: 900; }
+           header{width: 100%; margin: auto;background-color: rgb(247, 247, 81);  }
+        .header{width: 100%;   height: 120px; }
+        .header>h1{ width:226px; left: 50%; position: absolute; 
+            transform: translate(-50%, -22%);
+       }
+        .header>h1>a{font-size: 0;}
+        
+        .gnb{width: 100%; display: flex; justify-content: end;}
+        .gnb>ul{display: flex; padding-top: 0.5em;padding-right: 2em;}
+        .gnb>ul>li>a{padding-left: 1em;  }
+
+        .Menu{background-color: rgb(85, 53, 22);
+               }
+        .lnb{width: 100%; position: relative;}
+        .lnb>ul{display: flex; justify-content: space-evenly; width: 80%; margin: auto; }
+        .lnb>ul>li>a{ display: block; color: white; font-size: 18px; 
+             padding: 1em; font-family: 'sweet';
+                text-align: center;}
+        .lnb>ul>li:first-child>a{padding-left: 30px;}
+        .lnb>ul>li:last-child>a{padding-right: 30px;}
+
+        .subMenu{position: absolute; padding: 1.3em; background-color:white ; display: none;  }
+        .subMenu>li{padding-bottom: 0.5em;}
+        .subMenu>li>a{display: block; line-height: 2em;}
+        .lnb>ul>li:nth-of-type(1)>.subMenu>li{margin-left:1em; 
+         }
+
+        .lnb>ul>li:hover .subMenu{display: block; z-index: 99999;}
+         /* header end */
+
+         #sub1{width: 100%; margin: auto;  }
+         .content{width: 80%; margin: auto;}
+         .content>div{width: 80%; height: 100vh; display: flex; gap: 5em;
+                     line-height: 3em; font-size: 20px;}
+         .effect{width:100% ; margin: auto; padding: 5em; background-color: rgb(139, 12, 156); }
+         .textSub1 span{font-size: 30px;}
+         .textSub1 div{padding-top: 4.5em;}
+         /* .effect::after{content: ''; width: 70%; border: 20px solid rgb(46, 179, 79);
+                        border-radius: 50px;   margin: auto;    }             */
+         .effect2{width:100% ; margin: auto; padding: 5em; }
+         .textSub2 span{font-size: 30px;}
+         .textSub2 div{padding-top: 1.7em;}
+
+         .effect3{width:100% ; margin: auto; padding: 5em; background-color: rgb(139, 12, 156); }
+         .textSub3 span{font-size: 30px;}
+         .textSub3 div{padding-top: 2.7em;}
+
+         .effect4{width:100% ; margin: auto; padding: 5em; }
+         .textSub4 span{font-size: 30px;}
+     
+         .effect5{width:100% ; margin: auto; padding: 5em; background-color: rgb(139, 12, 156); }
+         .textSub5 span{font-size: 30px;}
+         .textSub5 div{padding-top: 3em;}
+
+         .effect6{width:100% ; margin: auto; padding: 5em; }
+         .textSub6 span{font-size: 30px;}
+         .textSub6 div{padding-top: 2.3em;}
+   </style> 
+    
+</head>
+<body>
+   <header>
+      <div class="header">
+          <h1><a href="index.html"><img src="./finish_design/logo_2.png">해남고구마</a>
+         </h1>
+         
+          <nav class="gnb">
+              <ul>
+                  <li><a href="#">로그인</a></li>                     
+                  <li><a href="#">회원가입</a></li>
+                  <li><a href="#">마이페이지</a></li>
+                  <li><a href="#">장바구니</a></li>
+                  <li><a href="#">고객센터</a></li>
+                  
+              </ul>
+          </nav>   
+      </div>
+      <div class="Menu">
+        <nav class="lnb">
+            <ul>
+                <li><a href="sub1_.html">About 구마</a>
+                    <ul class="subMenu">
+                        <li><a href="sub1_.html">구마의 효능</a></li>
+                       
+                    </ul>
+                </li>
+                <li><a href="sub2_1.html">구마 상품</a>
+                    <ul class="subMenu">
+                        <li><a href="sub2_1.html">농장별 구마</a></li>
+                        <li><a href="sub2_1.html">구마 외 상품</a></li>
+                       
+                    </ul>
+                </li>
+                <li><a href="#">구마 간식</a>
+                    <ul class="subMenu">
+                        <li><a href="#">달콤</a></li>
+                        <li><a href="#">짭짤</a></li>
+                        <li><a href="#">튼튼</a></li>
+                       
+                    </ul>
+                </li>
+                <li><a href="sub4.html">구마 요리</a>
+                    <ul class="subMenu">
+                        <li><a href="sub4.html">레시피</a></li>
+                    </ul>
+                </li>
+                <li><a href="sub5.html">구마 알리미</a>
+                    <ul class="subMenu">
+                        <li><a href="sub5.html">공지사항</a></li>
+                        <li><a href="sub5.html">이벤트</a></li>
+                        <li><a href="sub5.html">지도</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+      
+  </header>
+
+  <section id="sub1">
+  
+      <div class="content">
+
+         <div class="effect">
+            <div class="imgSub1"><img src="./images/green03.jpg" alt=""></div>
+            <div class="textSub1">
+                <div>
+                   <span>1. 소화가 잘 된다</span><br>
+                   고구마는 섬유질이 풍부하고 변비를 예방하는 데 도움을 준다. 실제로 2017년 Functional Foods in Health and Disease에 발표된 연구 결과에 따르면 고구마 소비는 유익한 장내 세균의 개선과도 관련이 있는 것으로 나타났다.
+                </div>
+            </div>
+         </div>
+
+         <div class="effect2">        
+            <div class="textSub2">
+                <div>
+                    <span>2. 운동 경련 위험을 줄인다</span><br>
+                    격렬한 운동 후에 경련이 일어나는 것을 막고 싶다면 단백질바 대신 고구마를 먹는 것도 좋은 방법이다. 영양사 세디비는 “고구마의 칼로리는 감자와 동일하지만, 섬유질과 항산화 물질, 풍부한 칼륨이 들어있다”라며 “실제로 바나나에서 발견되는 칼륨의 2배를 함유하고 있다”라고 말했다. 따라서 칼륨 결핍과 관련된 경련 위험을 줄이는 데 도움이 될 것이다.
+                    </div>
+            </div>
+            <div class="imgSub2"><img src="./images/green03.jpg" alt=""></div>
+         </div>
+
+         <div class="effect3">
+            <div class="imgSub3"><img src="./images/green04.jpg" alt=""></div>
+            <div class="textSub3">
+                <div>
+                    <span>3. 시력 향상에 도움을 준다</span><br>
+                    세디비는 “고구마는 비타민 A와 비타민 C가 풍부해 시력 건강에 도움을 준다”라고 말했다. 실제로 미국 안과 학회가 실시한 연구 결과에 따르면 고구마와 같은 음식에서 발견된 베타카로틴은 야맹증과 주변시 상실을 일으킬 수 있는 망막색소증 환자의 시력 저하율을 감소시켰다.
+                    </div>
+            </div>
+         </div>
+
+         <div class="effect4">           
+            <div class="textSub4">
+                <div>
+                   <span>4. 면역력이 높아진다</span> <br>
+                    Oregon Dietitian 설립자 버드는 “고구마는 비타민 A가 매우 높을 뿐만 아니라 비타민 C도 풍부하다”라며 “이는 모두 면역 체계를 강화하고 감염을 예방하는 데 도움을 준다”라고 말했다. 또한, “비타민 A 결핍은 면역력 저하, 특히 혈당 수치와 호흡기 감염과 관련이 있다”라고 덧붙였다.
+                    </div>
+            </div>
+            <div class="imgSub4"><img src="./images/plateguma.jpg" alt=""></div>
+         </div>
+
+         <div class="effect5">
+            <div class="imgSub5"><img src="./images/green03.jpg" alt=""></div>
+            <div class="textSub5">
+                <div>
+                    <span>5. LDL 콜레스테롤을 감소시킨다</span><br>
+                    영양사 클렐랜드는 “고구마에는 섬유질이 풍부해서 LDL 콜레스테롤을 낮추는 데 도움을 줄 수 있다”라고 말했다. LDL 콜레스테롤은 나쁜 콜레스테롤로 분류되며, 혈관에 각종 염증반응을 일으킨다. 높은 콜레스테롤을 낮추고 싶다면 고구마를 필수적으로 먹는 것도 좋은 방법이다.
+                    </div>
+            </div>
+         </div>
+
+         <div class="effect6">     
+            <div class="textSub6">
+                <div>
+                    <span>6. 포만감이 오래 지속된다</span><br>
+                    To The Pointe Nutrition 소유주 파인은 “고구마는 탄수화물과 수용성 식이섬유의 훌륭한 공급원”이라고 강조했다. 수용성 식이섬유는 소화 속도를 늦추는 데 도움이 돼 인슐린과 체내 지방 용해 물질인 렙틴의 꾸준한 분비를 촉진할 뿐 아니라 식사 중 배부른 느낌을 촉진해 자연스럽게 음식 섭취량을 조절할 수 있게 도와준다.
+                    </div>
+            </div>
+            <div class="imgSub6"><img src="./images/green04.jpg" alt=""></div>
+         </div>
+        
+    
+
+            <!-- 
+            [출처] : https://www.hidoc.co.kr/healthstory/news/C0000591221 | 하이닥 -->
+         
+
+
+
+
+      </div>
+
+
+  </section>
+
+
+
+
+
+   <script src="../js/jquery-3.6.0.min.js"></script>
+   <script src="../js/fullpage.js"></script>
+   <script>
+
+
+
+
+
+      
+   </script>
+
+
+</body>
+</html>
+
+<!-- 벤치마킹 사이트
+   https://www.foodsafetykorea.go.kr/portal/board/board.do?menu_grp=MENU_NEW01&menu_no=3120 
+   http://www.nongshim.com/management/overview/index
+
+
+-->
